@@ -98,5 +98,5 @@
     <a href="/repriseWebPHP3eme/horaire-eleve/index.php">Accueil</a>
     <a href="/repriseWebPHP3eme/horaire-eleve/pages/classes.php">Classes</a>
     <a href="/repriseWebPHP3eme/horaire-eleve/pages/cours.php">Cours</a>
-    <a href="/repriseWebPHP3eme/horaire-eleve/pages/horaire.php">Horaires</a>
+    <a href="/repriseWebPHP3eme/horaire-eleve/pages/creneaux.php">Créneaux</a>
 </nav>
