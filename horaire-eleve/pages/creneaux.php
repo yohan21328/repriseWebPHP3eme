@@ -39,12 +39,12 @@ require_once __DIR__ . '/../includes/header.php';
 
 <h2>Ajouter un créneau</h2>
 
-<form method="POST">
+<form method="POST" class="p-3 bg-white rounded shadow-sm">
     <input type="hidden" name="action" value="ajouter">
 
-    <label>
+    <label class="me-3">
         Classe :
-        <select name="classe_id" required>
+        <select name="classe_id" class="form-select" required>
             <?php foreach ($classes as $classe): ?>
                 <option value="<?= $classe['id'] ?>">
                     <?= htmlspecialchars($classe['nom']) ?>
@@ -53,9 +53,9 @@ require_once __DIR__ . '/../includes/header.php';
         </select>
     </label>
 
-    <label>
+    <label class="me-3">
         Cours :
-        <select name="cours_id" required>
+        <select name="cours_id" class="form-select" required>
             <?php foreach ($cours as $item): ?>
                 <option value="<?= $item['id'] ?>">
                     <?= htmlspecialchars($item['code']) ?>
@@ -65,9 +65,9 @@ require_once __DIR__ . '/../includes/header.php';
         </select>
     </label>
 
-    <label>
+    <label class="me-3">
         Jour :
-        <select name="jour" required>
+        <select name="jour" class="form-select" required>
             <option value="lundi">Lundi</option>
             <option value="mardi">Mardi</option>
             <option value="mercredi">Mercredi</option>
@@ -76,27 +76,27 @@ require_once __DIR__ . '/../includes/header.php';
         </select>
     </label>
 
-    <label>
+    <label class="me-3">
         Début :
-        <input type="time" name="heure_debut" required>
+        <input type="time" name="heure_debut" class="form-control" required>
     </label>
 
-    <label>
+    <label class="me-3">
         Fin :
-        <input type="time" name="heure_fin" required>
+        <input type="time" name="heure_fin" class="form-control" required>
     </label>
 
-    <label>
+    <label class="me-3">
         Salle :
-        <input type="text" name="salle" required>
+        <input type="text" name="salle" class="form-control" required>
     </label>
 
-    <button type="submit">Ajouter</button>
+    <button type="submit" class="btn btn-primary mt-3">Ajouter</button>
 </form>
 
 <h2>Créneaux</h2>
 
-<table border="1">
+<table class="table table-striped table-bordered">
     <tr>
         <th>Classe</th>
         <th>Cours</th>
@@ -124,7 +124,7 @@ require_once __DIR__ . '/../includes/header.php';
                 <form method="POST">
                     <input type="hidden" name="action" value="supprimer">
                     <input type="hidden" name="id" value="<?= $creneau['id'] ?>">
-                    <button type="submit">Supprimer</button>
+                    <button type="submit" class="btn btn-danger btn-sm">Supprimer</button>
                 </form>
             </td>
         </tr>

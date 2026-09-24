@@ -31,25 +31,25 @@ require_once __DIR__ . '/../includes/header.php';
 
 <h2>Ajouter une classe</h2>
 
-<form method="POST">
+<form method="POST" class="p-3 bg-white rounded shadow-sm">
     <input type="hidden" name="action" value="ajouter">
 
-    <label>
+    <label class="me-3">
         Nom :
-        <input type="text" name="nom" required>
+        <input type="text" name="nom" class="form-control" required>
     </label>
 
-    <label>
+    <label class="me-3">
         Année scolaire :
-        <input type="text" name="annee_scolaire" placeholder="2026-2027" required>
+        <input type="text" name="annee_scolaire" class="form-control" placeholder="2026-2027" required>
     </label>
 
-    <button type="submit">Ajouter</button>
+    <button type="submit" class="btn btn-primary mt-3">Ajouter</button>
 </form>
 
 <h2>Classes existantes</h2>
 
-<table border="1">
+<table class="table table-striped table-bordered">
     <tr>
         <th>ID</th>
         <th>Nom</th>
@@ -66,7 +66,7 @@ require_once __DIR__ . '/../includes/header.php';
                 <form method="POST">
                     <input type="hidden" name="action" value="supprimer">
                     <input type="hidden" name="id" value="<?= $classe['id'] ?>">
-                    <button type="submit">Supprimer</button>
+                    <button type="submit" class="btn btn-danger btn-sm">Supprimer</button>
                 </form>
             </td>
         </tr>
